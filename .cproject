@@ -82,11 +82,11 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration buildProperties="" description="" id="0.151444099.607691459.252834036" name="Build Run Wave" parent="org.eclipse.cdt.build.core.prefbase.cfg">
+				<configuration artifactName="${ProjName}" buildProperties="" description="" id="0.151444099.607691459.252834036" name="Build Run Wave" parent="org.eclipse.cdt.build.core.prefbase.cfg">
 					<folderInfo id="0.151444099.607691459.252834036." name="/" resourcePath="">
 						<toolChain id="org.eclipse.cdt.build.core.prefbase.toolchain.759382273" name="No ToolChain" resourceTypeBasedDiscovery="false" superClass="org.eclipse.cdt.build.core.prefbase.toolchain">
 							<targetPlatform id="org.eclipse.cdt.build.core.prefbase.toolchain.759382273.1827953212" name=""/>
-							<builder arguments="-f ${workspace_loc:/Citrino}/toolchain/makefile.mak all ${selected_resource_name} w${selected_resource_name}" command="make" enabledIncrementalBuild="true" id="org.eclipse.cdt.build.core.settings.default.builder.999965129" incrementalBuildTarget="" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<builder arguments="-f ${workspace_loc:/Citrino}/toolchain/makefile.mak all ${selected_resource_name} w${selected_resource_name}" command="make" enabledIncrementalBuild="true" id="org.eclipse.cdt.build.core.settings.default.builder.999965129" incrementalBuildTarget="" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelBuildOn="false" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.768887398" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.939898712" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.516220641" languageId="org.eclipse.cdt.core.assembly" languageName="Assembly" sourceContentType="org.eclipse.cdt.core.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
@@ -188,7 +188,7 @@
 					<folderInfo id="0.151444099.607691459.811480201." name="/" resourcePath="">
 						<toolChain id="org.eclipse.cdt.build.core.prefbase.toolchain.1315874585" name="No ToolChain" resourceTypeBasedDiscovery="false" superClass="org.eclipse.cdt.build.core.prefbase.toolchain">
 							<targetPlatform id="org.eclipse.cdt.build.core.prefbase.toolchain.1315874585.1798582802" name=""/>
-							<builder arguments="-f ${workspace_loc:/Citrino}/toolchain/makefile.mak w${selected_resource_name}" command="make" id="org.eclipse.cdt.build.core.settings.default.builder.57041499" incrementalBuildTarget="" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<builder arguments="-f ${workspace_loc:/Citrino}/toolchain/makefile.mak w${selected_resource_name}" command="make" id="org.eclipse.cdt.build.core.settings.default.builder.57041499" incrementalBuildTarget="" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelBuildOn="false" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.1705037827" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.943077879" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.248409257" languageId="org.eclipse.cdt.core.assembly" languageName="Assembly" sourceContentType="org.eclipse.cdt.core.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
@@ -217,10 +217,10 @@
 		<configuration configurationName="Build Run">
 			<resource resourceType="PROJECT" workspacePath="/Citrino"/>
 		</configuration>
-		<configuration configurationName="build">
+		<configuration configurationName="Wavegen">
 			<resource resourceType="PROJECT" workspacePath="/Citrino"/>
 		</configuration>
-		<configuration configurationName="Wavegen">
+		<configuration configurationName="build">
 			<resource resourceType="PROJECT" workspacePath="/Citrino"/>
 		</configuration>
 		<configuration configurationName="Build">
