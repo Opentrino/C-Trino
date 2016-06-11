@@ -1,5 +1,5 @@
 $date
-	Sat Jun 11 19:33:28 2016
+	Sat Jun 11 20:10:00 2016
 $end
 $version
 	Icarus Verilog
@@ -8,23 +8,23 @@ $timescale
 	1s
 $end
 $scope module alu_tb $end
-$var wire 5 ! s [4:0] $end
+$var wire 32 ! s [31:0] $end
 $var wire 1 " co $end
-$var reg 8 # a [7:0] $end
-$var reg 8 $ b [7:0] $end
+$var reg 32 # a [31:0] $end
+$var reg 32 $ b [31:0] $end
 $var reg 1 % ci $end
 $var reg 5 & f [4:0] $end
 $scope module _alu $end
-$var wire 8 ' a [7:0] $end
-$var wire 8 ( b [7:0] $end
+$var wire 32 ' a [31:0] $end
+$var wire 32 ( b [31:0] $end
 $var wire 1 % ci $end
 $var wire 5 ) f [4:0] $end
 $var reg 1 " co $end
-$var reg 5 * s [4:0] $end
+$var reg 32 * s [31:0] $end
 $upscope $end
 $scope task alu_calc $end
-$var reg 8 + _a [7:0] $end
-$var reg 8 , _b [7:0] $end
+$var reg 32 + _a [31:0] $end
+$var reg 32 , _b [31:0] $end
 $var reg 1 - _ci $end
 $var reg 5 . _f [4:0] $end
 $upscope $end
@@ -52,9 +52,27 @@ $end
 #1
 b11 !
 b11 *
+b10110 .
+b10 +
 b1 &
 b1 )
 b10 $
 b10 (
 b1 #
 b1 '
+#2
+b11111111111111111111111111111111 !
+b11111111111111111111111111111111 *
+b10101 .
+b0 ,
+b10110 &
+b10110 )
+b10 #
+b10 '
+#3
+b1 !
+b1 *
+b10101 &
+b10101 )
+b0 $
+b0 (
