@@ -7,10 +7,16 @@
 :vpi_module "v2005_math";
 :vpi_module "va_math";
 :vpi_module "v2009";
-S_0000000000dc65f0 .scope module, "core_main" "core_main" 2 1;
+S_00000000011765f0 .scope module, "name" "name" 2 1;
  .timescale 0 0;
+    .port_info 0 /INPUT 1 "rst"
+    .port_info 1 /INPUT 1 "clk"
+o0000000002755158 .functor BUFZ 1, C4<z>; HiZ drive
+v0000000001176770_0 .net "clk", 0 0, o0000000002755158;  0 drivers
+o0000000002755188 .functor BUFZ 1, C4<z>; HiZ drive
+v0000000001176810_0 .net "rst", 0 0, o0000000002755188;  0 drivers
 # The file index is used to find the file name in the following table.
 :file_names 3;
     "N/A";
     "<interactive>";
-    "src/core_main.sv";
+    "src/alu_tb.sv";

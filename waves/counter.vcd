@@ -1,5 +1,5 @@
 $date
-	Sat Jun 11 13:32:57 2016
+	Sat Jun 11 13:35:12 2016
 $end
 $version
 	Icarus Verilog
@@ -7,7 +7,7 @@ $end
 $timescale
 	1ps
 $end
-$scope module core_main $end
+$scope module counter_tb $end
 $var wire 64 ! q [63:0] $end
 $var reg 1 " clk $end
 $var reg 1 # en $end
