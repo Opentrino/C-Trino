@@ -14,17 +14,17 @@ makefile_dir:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 ##### Compilation rules and objects: #####
 #__GENMAKE__
-BINS = $(BIN)/alu.o \
+BINS = $(BIN)/core_main.o \
 	$(BIN)/alu_tb.o \
-	$(BIN)/core_main.o 
+	$(BIN)/alu.o 
 
-$(BIN)/alu.o: $(SRC)/alu.sv
+$(BIN)/core_main.o: $(SRC)/core_main.sv
 	$(IVERI) -o $@ $(VERIFLAGS) $^
 
 $(BIN)/alu_tb.o: $(SRC)/alu_tb.sv
 	$(IVERI) -o $@ $(VERIFLAGS) $^
 
-$(BIN)/core_main.o: $(SRC)/core_main.sv
+$(BIN)/alu.o: $(SRC)/alu.sv
 	$(IVERI) -o $@ $(VERIFLAGS) $^
 
 #__GENMAKE_END__

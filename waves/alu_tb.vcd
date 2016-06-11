@@ -1,5 +1,5 @@
 $date
-	Sat Jun 11 20:10:00 2016
+	Sat Jun 11 22:49:38 2016
 $end
 $version
 	Icarus Verilog
@@ -35,7 +35,7 @@ $enddefinitions $end
 #0
 $dumpvars
 b1 .
-0-
+1-
 b10 ,
 b1 +
 b0 *
@@ -50,12 +50,14 @@ b0 #
 b0 !
 $end
 #1
-b11 !
-b11 *
+b100 !
+b100 *
 b10110 .
+0-
 b10 +
 b1 &
 b1 )
+1%
 b10 $
 b10 (
 b1 #
@@ -67,6 +69,7 @@ b10101 .
 b0 ,
 b10110 &
 b10110 )
+0%
 b10 #
 b10 '
 #3
