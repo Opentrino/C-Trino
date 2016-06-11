@@ -7,7 +7,7 @@
 :vpi_module "v2005_math";
 :vpi_module "va_math";
 :vpi_module "v2009";
-S_0000000000dc65f0 .scope module, "core_main" "core_main" 2 1;
+S_0000000000fc65f0 .scope module, "core_main" "core_main" 2 1;
  .timescale 0 0;
 # The file index is used to find the file name in the following table.
 :file_names 3;

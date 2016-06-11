@@ -5,7 +5,7 @@ VERISIM = vvp
 WAVE = gtkwave
 WAVEFILES = waves
 
-VERIFLAGS = -g2012
+VERIFLAGS = -g2012 -Isrc
 SIMFLAGS = 
 WAVEFLAGS =
 
