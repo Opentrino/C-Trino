@@ -33,9 +33,10 @@ So far, this project has support for the following FPGAs:
 # How to run and use
 There are two main ways to develop this project:  
 1- Develop systemverilog code and **simulate** with Icarus  
-2- Develop systemverilog code and **synthesize** for FPGAs with Quartus  
+2- Develop systemverilog code and **synthesize** for FPGAs with Quartus / Your favourite proprietary IDE  
 
-- In the case of option 1, it is recommended the use of an actual IDE, such as Eclipse IDE. There is a project already prepared with a build system in place. Alternatively, you can just run the Windows/Linux scripts, but please note you need to respect the command-line arguments for these scripts.  
+- In the case of option 1, it is recommended the use of an actual IDE, such as Eclipse IDE.  
+There is an Eclipse project already prepared with a build system in place. Alternatively, you can just run the Windows/Linux scripts, but please note you need to respect the command-line arguments for these scripts.  
 The scripts that can be found inside the folder 'toolchain/< YourOS >' (which work for both Windows and Linux) are:
 > 1- **build**- Just compiles the project with Icarus. No synthesization will occur.  
 > 2- **build_run** - Compiles and simulates with Icarus.  
