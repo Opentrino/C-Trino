@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/top.sv
+source_file = 1, C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/alu.sv
+source_file = 1, C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/pipeline.sv
+source_file = 1, C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv
+source_file = 1, C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/core_main.sv
+source_file = 1, C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/memory.sv
+source_file = 1, /users/miguel/dropbox/opentrino/citrino/src/defines.sv
+source_file = 1, C:/Users/Miguel/Dropbox/Opentrino/Citrino/toolchain/Windows/FPGA/CycloneIV/Citrino/db/top.cbx.xml
+design_name = top
+instance = comp, \CLK~input , CLK~input, top, 1

@@ -1,0 +1,1008 @@
+Analysis & Synthesis report for top
+Sun Aug 07 01:18:44 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "Core:core|Microcode:ucode"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Aug 07 01:18:44 2016       ;
+; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Revision Name                      ; top                                         ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 1                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE6E22C8        ;                    ;
+; Top-level entity name                                                      ; top                ; top                ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++--------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------+---------+
+; File Name with User-Entered Path                       ; Used in Netlist ; File Type                          ; File Name with Absolute Path                               ; Library ;
++--------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------+---------+
+; ../../../../../src/top.sv                              ; yes             ; User SystemVerilog HDL File        ; C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/top.sv       ;         ;
+; ../../../../../src/alu.sv                              ; yes             ; Auto-Found SystemVerilog HDL File  ; C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/alu.sv       ;         ;
+; ../../../../../src/pipeline.sv                         ; yes             ; Auto-Found SystemVerilog HDL File  ; C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/pipeline.sv  ;         ;
+; ../../../../../src/microcode.sv                        ; yes             ; Auto-Found SystemVerilog HDL File  ; C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv ;         ;
+; ../../../../../src/core_main.sv                        ; yes             ; Auto-Found SystemVerilog HDL File  ; C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/core_main.sv ;         ;
+; ../../../../../src/memory.sv                           ; yes             ; Auto-Found SystemVerilog HDL File  ; C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/memory.sv    ;         ;
+; /users/miguel/dropbox/opentrino/citrino/src/defines.sv ; yes             ; Auto-Found SystemVerilog HDL File  ; /users/miguel/dropbox/opentrino/citrino/src/defines.sv     ;         ;
++--------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 1     ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; CLK   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 1     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |top                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 1    ; 0            ; |top                ; top         ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Core:core|Microcode:ucode"                                                            ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; ctrl   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; opcode ; Input  ; Info     ; Stuck at GND                                                                        ;
+; eos    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sos    ; Input  ; Info     ; Stuck at GND                                                                        ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 1                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Sun Aug 07 01:18:09 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Citrino -c top
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 7 design units, including 7 entities, in source file /users/miguel/dropbox/opentrino/citrino/src/top.sv
+    Info (12023): Found entity 1: alu File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/alu.sv Line: 10
+    Info (12023): Found entity 2: Regfile File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/pipeline.sv Line: 4
+    Info (12023): Found entity 3: Pipeline File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/pipeline.sv Line: 8
+    Info (12023): Found entity 4: Microcode File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 3
+    Info (12023): Found entity 5: Core File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/core_main.sv Line: 5
+    Info (12023): Found entity 6: Memory File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/memory.sv Line: 3
+    Info (12023): Found entity 7: top File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/top.sv Line: 4
+Warning (10236): Verilog HDL Implicit Net warning at top.sv(14): created implicit net for "clk" File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/top.sv Line: 14
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "Core" for hierarchy "Core:core" File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/top.sv Line: 14
+Info (12128): Elaborating entity "Microcode" for hierarchy "Core:core|Microcode:ucode" File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/core_main.sv Line: 13
+Warning (10036): Verilog HDL or VHDL warning at microcode.sv(34): object "zero" assigned a value but never read File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 34
+Warning (10036): Verilog HDL or VHDL warning at microcode.sv(39): object "instruction_type" assigned a value but never read File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 39
+Warning (10230): Verilog HDL assignment warning at microcode.sv(33): truncated value with size 32 to match size of target (8) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 33
+Warning (10230): Verilog HDL assignment warning at microcode.sv(58): truncated value with size 32 to match size of target (8) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 58
+Warning (10230): Verilog HDL assignment warning at microcode.sv(102): truncated value with size 32 to match size of target (8) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 102
+Warning (10230): Verilog HDL assignment warning at microcode.sv(53): truncated value with size 32 to match size of target (8) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 53
+Warning (10270): Verilog HDL Case Statement warning at microcode.sv(68): incomplete case statement has no default case item File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 68
+Warning (10240): Verilog HDL Always Construct warning at microcode.sv(85): inferring latch(es) for variable "microunit_running", which holds its previous value in one or more paths through the always construct File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 85
+Warning (10240): Verilog HDL Always Construct warning at microcode.sv(85): inferring latch(es) for variable "code_ip", which holds its previous value in one or more paths through the always construct File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 85
+Warning (10240): Verilog HDL Always Construct warning at microcode.sv(85): inferring latch(es) for variable "flag_jmp", which holds its previous value in one or more paths through the always construct File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 85
+Warning (10240): Verilog HDL Always Construct warning at microcode.sv(85): inferring latch(es) for variable "stack_ptr", which holds its previous value in one or more paths through the always construct File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 85
+Warning (10240): Verilog HDL Always Construct warning at microcode.sv(85): inferring latch(es) for variable "flag_jmp_addr", which holds its previous value in one or more paths through the always construct File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 85
+Warning (10240): Verilog HDL Always Construct warning at microcode.sv(85): inferring latch(es) for variable "func_fmt", which holds its previous value in one or more paths through the always construct File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 85
+Warning (10240): Verilog HDL Always Construct warning at microcode.sv(85): inferring latch(es) for variable "ctrl", which holds its previous value in one or more paths through the always construct File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 85
+Warning (10240): Verilog HDL Always Construct warning at microcode.sv(85): inferring latch(es) for variable "microunit_init", which holds its previous value in one or more paths through the always construct File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 85
+Warning (10230): Verilog HDL assignment warning at microcode.sv(136): truncated value with size 32 to match size of target (8) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 136
+Warning (10230): Verilog HDL assignment warning at microcode.sv(145): truncated value with size 67 to match size of target (66) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 145
+Warning (10230): Verilog HDL assignment warning at microcode.sv(139): truncated value with size 32 to match size of target (8) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 139
+Warning (10230): Verilog HDL assignment warning at microcode.sv(179): truncated value with size 32 to match size of target (8) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 179
+Warning (10230): Verilog HDL assignment warning at microcode.sv(181): truncated value with size 32 to match size of target (8) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 181
+Warning (10855): Verilog HDL warning at microcode.sv(152): initial value for variable segment_counter should be constant File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 152
+Warning (10855): Verilog HDL warning at microcode.sv(152): initial value for variable code should be constant File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 152
+Warning (10855): Verilog HDL warning at microcode.sv(152): initial value for variable microinstr_ctr should be constant File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 152
+Warning (10855): Verilog HDL warning at microcode.sv(152): initial value for variable int_segment_counter should be constant File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 152
+Warning (10030): Net "code[0][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[0][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[0][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[1][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[1][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[1][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[2][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[2][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[2][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[3][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[3][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[3][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[4][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[4][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[4][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[5][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[5][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[5][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[6][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[6][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[6][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[7][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[7][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[7][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[8][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[8][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[8][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[9][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[9][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[9][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[10][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[10][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[10][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[11][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[11][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[11][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[12][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[12][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[12][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[13][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[13][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[13][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[14][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[14][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[14][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[15][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[15][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[15][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[16][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[16][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[16][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[17][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[17][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[17][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[18][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[18][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[18][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[19][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[19][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[19][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[20][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[20][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[20][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[21][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[21][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[21][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[22][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[22][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[22][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[23][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[23][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[23][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[24][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[24][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[24][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[25][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[25][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[25][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[26][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[26][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[26][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[27][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[27][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[27][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[28][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[28][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[28][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[29][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[29][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[29][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[30][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[30][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[30][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[31][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[31][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[31][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[32][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[32][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[32][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[33][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[33][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[33][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[34][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[34][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[34][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[35][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[35][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[35][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[36][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[36][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[36][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[37][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[37][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[37][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[38][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[38][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[38][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[39][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[39][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[39][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[40][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[40][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[40][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[41][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[41][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[41][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[42][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[42][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[42][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[43][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[43][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[43][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[44][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[44][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[44][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[45][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[45][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[45][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[46][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[46][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[46][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[47][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[47][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[47][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[48][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[48][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[48][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[49][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[49][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[49][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[50][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[50][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[50][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[51][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[51][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[51][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[52][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[52][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[52][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[53][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[53][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[53][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[54][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[54][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[54][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[55][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[55][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[55][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[56][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[56][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[56][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[57][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[57][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[57][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[58][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[58][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[58][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[59][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[59][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[59][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[60][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[60][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[60][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[61][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[61][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[61][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[62][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[62][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[62][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[63][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[63][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[63][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[64][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[64][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[64][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[65][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[65][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[65][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[66][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[66][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[66][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[67][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[67][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[67][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[68][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[68][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[68][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[69][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[69][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[69][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[70][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[70][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[70][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[71][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[71][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[71][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[72][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[72][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[72][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[73][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[73][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[73][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[74][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[74][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[74][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[75][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[75][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[75][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[76][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[76][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[76][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[77][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[77][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[77][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[78][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[78][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[78][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[79][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[79][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[79][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[80][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[80][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[80][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[81][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[81][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[81][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[82][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[82][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[82][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[83][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[83][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[83][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[84][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[84][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[84][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[85][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[85][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[85][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[86][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[86][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[86][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[87][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[87][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[87][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[88][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[88][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[88][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[89][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[89][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[89][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[90][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[90][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[90][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[91][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[91][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[91][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[92][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[92][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[92][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[93][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[93][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[93][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[94][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[94][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[94][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[95][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[95][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[95][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[96][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[96][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[96][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[97][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[97][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[97][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[98][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[98][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[98][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[99][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[99][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[99][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[100][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[100][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[100][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[101][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[101][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[101][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[102][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[102][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[102][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[103][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[103][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[103][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[104][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[104][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[104][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[105][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[105][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[105][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[106][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[106][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[106][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[107][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[107][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[107][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[108][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[108][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[108][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[109][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[109][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[109][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[110][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[110][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[110][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[111][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[111][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[111][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[112][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[112][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[112][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[113][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[113][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[113][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[114][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[114][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[114][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[115][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[115][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[115][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[116][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[116][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[116][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[117][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[117][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[117][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[118][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[118][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[118][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[119][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[119][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[119][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[120][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[120][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[120][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[121][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[121][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[121][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[122][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[122][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[122][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[123][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[123][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[123][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[124][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[124][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[124][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[125][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[125][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[125][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[126][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[126][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[126][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[127][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[127][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[127][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[128][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[128][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[128][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[129][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[129][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[129][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[130][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[130][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[130][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[131][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[131][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[131][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[132][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[132][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[132][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[133][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[133][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[133][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[134][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[134][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[134][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[135][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[135][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[135][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[136][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[136][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[136][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[137][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[137][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[137][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[138][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[138][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[138][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[139][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[139][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[139][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[140][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[140][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[140][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[141][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[141][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[141][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[142][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[142][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[142][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[143][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[143][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[143][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[144][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[144][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[144][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[145][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[145][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[145][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[146][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[146][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[146][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[147][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[147][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[147][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[148][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[148][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[148][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[149][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[149][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[149][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[150][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[150][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[150][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[151][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[151][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[151][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[152][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[152][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[152][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[153][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[153][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[153][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[154][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[154][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[154][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[155][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[155][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[155][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[156][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[156][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[156][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[157][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[157][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[157][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[158][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[158][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[158][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[159][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[159][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[159][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[160][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[160][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[160][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[161][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[161][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[161][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[162][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[162][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[162][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[163][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[163][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[163][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[164][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[164][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[164][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[165][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[165][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[165][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[166][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[166][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[166][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[167][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[167][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[167][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[168][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[168][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[168][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[169][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[169][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[169][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[170][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[170][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[170][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[171][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[171][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[171][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[172][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[172][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[172][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[173][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[173][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[173][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[174][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[174][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[174][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[175][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[175][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[175][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[176][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[176][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[176][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[177][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[177][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[177][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[178][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[178][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[178][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[179][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[179][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[179][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[180][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[180][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[180][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[181][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[181][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[181][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[182][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[182][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[182][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[183][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[183][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[183][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[184][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[184][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[184][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[185][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[185][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[185][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[186][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[186][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[186][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[187][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[187][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[187][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[188][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[188][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[188][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[189][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[189][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[189][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[190][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[190][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[190][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[191][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[191][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[191][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[192][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[192][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[192][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[193][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[193][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[193][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[194][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[194][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[194][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[195][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[195][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[195][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[196][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[196][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[196][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[197][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[197][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[197][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[198][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[198][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[198][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[199][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[199][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[199][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[200][65..63]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[200][42..35]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "code[200][32..0]" at microcode.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 22
+Warning (10030): Net "seg_start.data_a" at microcode.sv(23) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 23
+Warning (10030): Net "seg_start.waddr_a" at microcode.sv(23) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 23
+Warning (10030): Net "int_seg_start.data_a" at microcode.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 24
+Warning (10030): Net "int_seg_start.waddr_a" at microcode.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 24
+Warning (10030): Net "seg_start.we_a" at microcode.sv(23) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 23
+Warning (10030): Net "int_seg_start.we_a" at microcode.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 24
+Info (10041): Inferred latch for "microunit_init" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[0]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[1]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[2]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[3]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[4]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[5]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[6]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[7]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[8]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[9]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[10]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[11]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[12]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[13]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[14]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[15]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[16]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[17]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[18]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[19]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[20]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[21]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[22]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[23]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[24]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[25]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[26]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[27]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[28]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[29]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[30]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[31]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "ctrl[32]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "flag_jmp_addr[0]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "flag_jmp_addr[1]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "flag_jmp_addr[2]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "flag_jmp_addr[3]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "flag_jmp_addr[4]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "flag_jmp_addr[5]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "flag_jmp_addr[6]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "flag_jmp_addr[7]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "stack_ptr[0]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "stack_ptr[1]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "stack_ptr[2]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "stack_ptr[3]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "stack_ptr[4]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "stack_ptr[5]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "stack_ptr[6]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "stack_ptr[7]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "flag_jmp" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "code_ip[0]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "code_ip[1]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "code_ip[2]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "code_ip[3]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "code_ip[4]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "code_ip[5]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "code_ip[6]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (10041): Inferred latch for "code_ip[7]" at microcode.sv(108) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/microcode.sv Line: 108
+Info (12128): Elaborating entity "Pipeline" for hierarchy "Core:core|Pipeline:pipe" File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/core_main.sv Line: 14
+Warning (10230): Verilog HDL assignment warning at pipeline.sv(13): truncated value with size 32 to match size of target (8) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/pipeline.sv Line: 13
+Info (12128): Elaborating entity "Memory" for hierarchy "Memory:mem" File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/top.sv Line: 15
+Warning (10230): Verilog HDL assignment warning at memory.sv(10): truncated value with size 32 to match size of target (8) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/memory.sv Line: 10
+Warning (10240): Verilog HDL Always Construct warning at memory.sv(16): inferring latch(es) for variable "oe", which holds its previous value in one or more paths through the always construct File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/memory.sv Line: 16
+Info (10041): Inferred latch for "oe" at memory.sv(17) File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/memory.sv Line: 17
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/top.sv Line: 14
+Info (144001): Generated suppressed messages file C:/Users/Miguel/Dropbox/Opentrino/Citrino/toolchain/Windows/FPGA/CycloneIV/Citrino/top.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLK" File: C:/Users/Miguel/Dropbox/Opentrino/Citrino/src/top.sv Line: 6
+Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 642 warnings
+    Info: Peak virtual memory: 874 megabytes
+    Info: Processing ended: Sun Aug 07 01:18:44 2016
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:01:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Miguel/Dropbox/Opentrino/Citrino/toolchain/Windows/FPGA/CycloneIV/Citrino/top.map.smsg.
+
+
