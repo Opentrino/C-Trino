@@ -7,7 +7,7 @@ typedef enum {
 	_ALU_INC, _ALU_DEC, _ALU_ZERO, _ALU_ONE, _ALU_MAX
 } aluf_t;
 
-module  alu(a, b, ci, f, s, co);
+module ALU(a, b, ci, f, s, co);
 	input wire [`ALU_WIDTH - 1:0] a,b;
 	input wire ci;
 	input wire [`ALU_FUNC_WIDTH - 1:0] f;
@@ -16,7 +16,7 @@ module  alu(a, b, ci, f, s, co);
 	
 	always@(a or b or ci or f) begin
 		case(f)
-		`ALU_FUNC_WIDTH'd0: s <= s; /* NoOp/Buffer */
+		`ALU_FUNC_WIDTH'd0: s <= s; /* NoOp / Buffer */
 		`ALU_FUNC_WIDTH'd1: s <= a + b + ci; /* Add */
 		`ALU_FUNC_WIDTH'd2: s <= a - b - ci; /* Sub */
 		`ALU_FUNC_WIDTH'd3: s <= a * b; /* Mul */
@@ -41,4 +41,9 @@ module  alu(a, b, ci, f, s, co);
 		`ALU_FUNC_WIDTH'd22: s <= ~0; /* Max */
 		endcase
 	end
+endmodule
+
+module Integer_Unit(input next);
+	//ALU alu(0, 0, 0, 0, 0, 0);	
+	
 endmodule

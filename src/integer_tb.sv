@@ -1,4 +1,4 @@
-`include "alu.sv"
+`include "integer.sv"
 
 module alu_tb;
 	/************ Variables: ************/
@@ -7,7 +7,7 @@ module alu_tb;
 	reg [`ALU_FUNC_WIDTH - 1:0] f = 0;
 	wire [`ALU_WIDTH - 1:0] s;
 	wire co;
-	alu _alu(a,b,ci,f,s,co);
+	ALU alu(a,b,ci,f,s,co);
 	
 	/************ Tasks: ************/
 	task alu_calc;

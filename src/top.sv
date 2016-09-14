@@ -1,4 +1,4 @@
-`include "core_main.sv"
+`include "chip_die.sv"
 `include "memory.sv"
 
 module top(
@@ -11,7 +11,7 @@ wire [7:0]mem_data;
 wire mrd, mwr;
 /********************/
 
-Core core(clk, mem_addr, mem_data, mrd, mwr);
+Die    die(clk, mem_addr, mem_data, mrd, mwr);
 Memory mem(clk, mem_addr, mem_data, mrd, mwr);
 
 endmodule

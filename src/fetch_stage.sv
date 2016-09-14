@@ -23,7 +23,10 @@
  * 
  */
 
-module Stage_Fetch();
+module Stage_PreFetch(input next);
 	
-
+	
+	always@(next) begin
+		
+	end
 endmodule
