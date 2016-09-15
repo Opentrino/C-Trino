@@ -7,19 +7,19 @@
 :vpi_module "v2005_math";
 :vpi_module "va_math";
 :vpi_module "v2009";
-S_000000000034c330 .scope module, "Stage_PreFetch" "Stage_PreFetch" 2 26;
+S_000000000068c330 .scope module, "Stage_PreFetch" "Stage_PreFetch" 2 26;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "next"
-o000000000034d6a8 .functor BUFZ 1, C4<z>; HiZ drive
-v000000000034c4b0_0 .net "next", 0 0, o000000000034d6a8;  0 drivers
-E_000000000034c7b0 .event edge, v000000000034c4b0_0;
-    .scope S_000000000034c330;
+o000000000068d6a8 .functor BUFZ 1, C4<z>; HiZ drive
+v000000000068c4b0_0 .net "next", 0 0, o000000000068d6a8;  0 drivers
+E_000000000068c7b0 .event edge, v000000000068c4b0_0;
+    .scope S_000000000068c330;
 T_0 ;
-    %wait E_000000000034c7b0;
+    %wait E_000000000068c7b0;
     %jmp T_0;
     .thread T_0, $push;
 # The file index is used to find the file name in the following table.
 :file_names 3;
     "N/A";
     "<interactive>";
-    "src/fetch_stage.sv";
+    "src/stage1_prefetch.sv";

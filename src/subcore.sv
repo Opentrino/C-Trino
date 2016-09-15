@@ -2,12 +2,12 @@
 `include "l2_cache.sv"
 `include "l1_icache.sv"
 `include "l1_dcache.sv"
-`include "fetch_stage.sv"
-`include "predecode_stage.sv"
-`include "microcode.sv"
+`include "stage1_prefetch.sv"
+`include "stage2_predecode.sv"
+`include "stage3_microcode.sv"
 `include "register_file.sv"
-`include "execution_stage.sv"
-`include "memory_access_stage.sv"
+`include "stage6_execution.sv"
+`include "stage7_memory_access.sv"
 
 /* Microarchitecture TODO-List:
  ********************************************

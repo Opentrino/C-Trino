@@ -16,4 +16,4 @@ v000000000034c470_0 .net "next", 0 0, o000000000034d0d8;  0 drivers
 :file_names 3;
     "N/A";
     "<interactive>";
-    "src/predecode_stage.sv";
+    "src/stage2_predecode.sv";

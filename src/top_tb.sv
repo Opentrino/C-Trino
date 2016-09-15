@@ -1,5 +1,5 @@
 `include "chip_die.sv"
-`include "memory.sv"
+`include "dram.sv"
 
 module top_tb;
 
@@ -9,12 +9,12 @@ inout [7:0]mem_data;
 wire mrd, mwr;
 /********************/
 
-Die    die(clk, mem_addr, mem_data, mrd, mwr);
-Memory mem(clk, mem_addr, mem_data, mrd, mwr);
+Die  die (clk, mem_addr, mem_data, mrd, mwr);
+DRAM dram(clk, mem_addr, mem_data, mrd, mwr);
 
 initial begin
 	$dumpfile("top_tb.vcd");
-	$dumpvars(0, die, mem);
+	$dumpvars(0, die, dram);
 	
 	#10
 	#10

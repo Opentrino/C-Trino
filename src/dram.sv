@@ -1,6 +1,6 @@
 `include "defines.sv"
 
-module Memory (clk, mem_addr, mem_data, mrd, mwr);
+module DRAM (clk, mem_addr, mem_data, mrd, mwr);
 	/* Output enable: */
 	reg oe = 0;
 	

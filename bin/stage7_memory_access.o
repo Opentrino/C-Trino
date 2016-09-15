@@ -16,4 +16,4 @@ v000000000034c450_0 .net "next", 0 0, o000000000034d0b8;  0 drivers
 :file_names 3;
     "N/A";
     "<interactive>";
-    "src/memory_access_stage.sv";
+    "src/stage7_memory_access.sv";

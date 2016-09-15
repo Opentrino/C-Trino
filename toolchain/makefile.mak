@@ -15,19 +15,19 @@ makefile_dir:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 ##### Compilation rules and objects: #####
 #__GENMAKE__
 BINS = $(BIN)/chip_die.o \
-	$(BIN)/execution_stage.o \
-	$(BIN)/fetch_stage.o \
+	$(BIN)/dram.o \
 	$(BIN)/integer.o \
 	$(BIN)/integer_tb.o \
 	$(BIN)/l1_dcache.o \
 	$(BIN)/l1_icache.o \
 	$(BIN)/l2_cache.o \
 	$(BIN)/l3_cache.o \
-	$(BIN)/memory.o \
-	$(BIN)/memory_access_stage.o \
-	$(BIN)/microcode.o \
-	$(BIN)/predecode_stage.o \
 	$(BIN)/register_file.o \
+	$(BIN)/stage1_prefetch.o \
+	$(BIN)/stage2_predecode.o \
+	$(BIN)/stage3_microcode.o \
+	$(BIN)/stage6_execution.o \
+	$(BIN)/stage7_memory_access.o \
 	$(BIN)/subcore.o \
 	$(BIN)/top.o \
 	$(BIN)/top_tb.o \
@@ -36,10 +36,7 @@ BINS = $(BIN)/chip_die.o \
 $(BIN)/chip_die.o: $(SRC)/chip_die.sv
 	$(IVERI) -o $@ $(VERIFLAGS) $^
 
-$(BIN)/execution_stage.o: $(SRC)/execution_stage.sv
-	$(IVERI) -o $@ $(VERIFLAGS) $^
-
-$(BIN)/fetch_stage.o: $(SRC)/fetch_stage.sv
+$(BIN)/dram.o: $(SRC)/dram.sv
 	$(IVERI) -o $@ $(VERIFLAGS) $^
 
 $(BIN)/integer.o: $(SRC)/integer.sv
@@ -60,19 +57,22 @@ $(BIN)/l2_cache.o: $(SRC)/l2_cache.sv
 $(BIN)/l3_cache.o: $(SRC)/l3_cache.sv
 	$(IVERI) -o $@ $(VERIFLAGS) $^
 
-$(BIN)/memory.o: $(SRC)/memory.sv
-	$(IVERI) -o $@ $(VERIFLAGS) $^
-
-$(BIN)/memory_access_stage.o: $(SRC)/memory_access_stage.sv
-	$(IVERI) -o $@ $(VERIFLAGS) $^
-
-$(BIN)/microcode.o: $(SRC)/microcode.sv
-	$(IVERI) -o $@ $(VERIFLAGS) $^
-
-$(BIN)/predecode_stage.o: $(SRC)/predecode_stage.sv
-	$(IVERI) -o $@ $(VERIFLAGS) $^
-
 $(BIN)/register_file.o: $(SRC)/register_file.sv
+	$(IVERI) -o $@ $(VERIFLAGS) $^
+
+$(BIN)/stage1_prefetch.o: $(SRC)/stage1_prefetch.sv
+	$(IVERI) -o $@ $(VERIFLAGS) $^
+
+$(BIN)/stage2_predecode.o: $(SRC)/stage2_predecode.sv
+	$(IVERI) -o $@ $(VERIFLAGS) $^
+
+$(BIN)/stage3_microcode.o: $(SRC)/stage3_microcode.sv
+	$(IVERI) -o $@ $(VERIFLAGS) $^
+
+$(BIN)/stage6_execution.o: $(SRC)/stage6_execution.sv
+	$(IVERI) -o $@ $(VERIFLAGS) $^
+
+$(BIN)/stage7_memory_access.o: $(SRC)/stage7_memory_access.sv
 	$(IVERI) -o $@ $(VERIFLAGS) $^
 
 $(BIN)/subcore.o: $(SRC)/subcore.sv
